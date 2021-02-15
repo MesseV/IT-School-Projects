@@ -5,7 +5,7 @@ public class Bloc {
     private String bloc;
     private int etaje;
 
-    Bloc(int etaje, String scara) {
+    public Bloc(int etaje, String scara) {
         this.etaje = etaje;
         this.scara = scara;
     }
