@@ -13,5 +13,6 @@ public class Main {
         System.out.println("Numele blocului: " + blocA1.getNumeBloc());
         blocB1.setNumeBloc("Blocul shitty");
         
+        
     }
 }

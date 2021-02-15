@@ -22,6 +22,7 @@ public class Bloc {
 
     public String getNumeBloc () {
         return this.numeBloc;
+        
     }
 
 }
