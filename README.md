@@ -1,2 +1,2 @@
 # IT-School-Projects
-Project made during class.
+Projects made during class.
