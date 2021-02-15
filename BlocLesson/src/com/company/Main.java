@@ -7,7 +7,10 @@ public class Main {
 	Bloc blocB1 = new Bloc(5, "S30", "B1");
 
         System.out.println("Adresa:" + blocA1.getAddress());
+        System.out.println("Adresa:" + blocB1.getAddress());
 
+        blocA1.setNumeBloc("Blocul Meu");
+        System.out.println("Numele blocului: " + blocA1.getNumeBloc());
 
     }
 }

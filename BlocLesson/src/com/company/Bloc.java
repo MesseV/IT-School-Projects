@@ -4,6 +4,7 @@ public class Bloc {
     private String scara;
     private String bloc;
     private int etaje;
+    private String numeBloc;
 
     public Bloc(int etaje, String scara, String bloc) {
         this.etaje = etaje;
@@ -12,8 +13,15 @@ public class Bloc {
     }
 
     public String getAddress () {
-        String adresa = this.bloc + " " + this.scara;
-        return adresa;
+        return this.bloc + " " + this.scara;
+    }
+
+    public void setNumeBloc (String numeBloc) {
+        this.numeBloc = numeBloc; 
+    }
+
+    public String getNumeBloc () {
+        return this.numeBloc;
     }
 
 }
