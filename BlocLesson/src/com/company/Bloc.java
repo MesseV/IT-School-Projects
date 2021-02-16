@@ -12,6 +12,14 @@ public class Bloc {
         this.bloc = bloc;
     }
 
+    public void setEtaje (int etaje) {
+        this.etaje = etaje;
+    }
+
+    public int getEtaje () {
+        return this.etaje;
+    }
+
     public String getAddress () {
         return this.bloc + " " + this.scara;
     }
