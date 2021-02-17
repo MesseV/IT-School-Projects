@@ -19,8 +19,22 @@ public class Main {
     cardSIM cardSim1 = new cardSIM(3, "Vodafone");
     cardSIM cardSim2 = new cardSIM(5, "Orange");
 
+    ContacteSim[] contacts = new ContacteSim[2];
+        ContacteSim contactAcasa = new ContacteSim("035114141498");
+            contactAcasa.setNume("Acasa");
+            contactAcasa.setPrenume("");
+        ContacteSim contactMircea = new ContacteSim("07561823475");
+            contactMircea.setNume("Popescu");
+            contactMircea.setPrenume("Mircea");
+
+            contacts[0] = contactAcasa;
+            contacts[1] = contactMircea;
+
+            cardSim1.setContacte(contacts);
+
     telefon1.setSim(cardSim1);
     telefon2.setSim(new cardSIM(5, "Orange")); //asta e echivalent cu "cardSim2"
+
 
         afiseaza(telefon1);
         afiseaza(telefon2);
@@ -37,5 +51,15 @@ public class Main {
         String frecventa = sim.getNumeFrecventa();
         System.out.println("Telefonul " + model + " are diagonala " + diagonala + ", memorie de " + memorie +
                 " si este inregistrat la " + operator + " cu frecventa de " + frecventa + ".");
+        
+        ContacteSim[] contacts = sim.getContacte();
+        if (contacts != null) {
+            for (int i = 0; i < contacts.length; i++) {
+                ContacteSim contact = contacts[i];
+                String nume = contact.getNume();
+                String prenume = contact.getPrenume();
+                String numarTelefon = contact.getNumarTelefon();
+            }
+        }
     }
 }

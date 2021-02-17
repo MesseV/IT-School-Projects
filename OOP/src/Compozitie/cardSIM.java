@@ -4,6 +4,7 @@ public class cardSIM {
 
     private String operator;
     private String numeFrecventa;
+    private ContacteSim[] contacte;
 
     public cardSIM(int frecventa, String operator) {
         this.operator = operator;
@@ -24,5 +25,13 @@ public class cardSIM {
 
     public String getNumeFrecventa () {
         return this.numeFrecventa;
+    }
+
+    public void setContacte(ContacteSim[] contacte) {
+        this.contacte = contacte;
+    }
+
+    public ContacteSim[] getContacte() {
+        return contacte;
     }
 }
