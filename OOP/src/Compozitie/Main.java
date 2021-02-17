@@ -35,11 +35,8 @@ public class Main {
     telefon1.setSim(cardSim1);
     telefon2.setSim(new cardSIM(5, "Orange")); //asta e echivalent cu "cardSim2"
 
-
         afiseaza(telefon1);
         afiseaza(telefon2);
-
-
     }
 
     public static void afiseaza (Telefon telefon) {
