@@ -2,7 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11a8b731-a2b3-42cc-a76c-52b4f163ed8c" name="Default Changelist" comment="added public to bloc">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlocLesson.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlocLesson/com/company/Bloc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlocLesson/com/company/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Basic/Bloc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Basic/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../telefonSiCard/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../telefonSiCard/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../telefonSiCard/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../telefonSiCard/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../telefonSiCard/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../telefonSiCard/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../telefonSiCard/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../telefonSiCard/src/com/company/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../telefonSiCard/telefonSiCard.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,10 +40,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/com/company/Bloc.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/com/company/Main.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1oWmlBmVRZGk88nUD7LsihIQVpZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -87,6 +105,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../OOP" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
