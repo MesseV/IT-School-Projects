@@ -1,14 +1,28 @@
 package Compozitie;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-    Telefon telefon1 = new Telefon("IPhone X");
+        Scanner reader = new Scanner(System.in);
+
+        System.out.println("Introduceti modelul primului telefon: ");
+        String model = reader.nextLine();
+    Telefon telefon1 = new Telefon(model);
     telefon1.setMemorie(10);
     telefon1.setDiagonala(8);
 
-    Telefon telefon2 = new Telefon("Samsung S9");
+        System.out.println("Introduceti modelul celui de-al doilea telefon: ");
+        String model2 = reader.nextLine();
+    Telefon telefon2 = new Telefon(model2);
     telefon2.setMemorie(12);
     telefon2.setDiagonala(10);
+
+    cardSIM cardSim1 = new cardSIM(3, "Vodafone");
+    cardSIM cardSim2 = new cardSIM(5, "Orange");
+
+    telefon1.setSim(cardSim1);
+    telefon2.setSim(new cardSIM(5, "Orange")); //asta e echivalent cu "cardSim2"
     }
 }

@@ -5,6 +5,7 @@ public class Telefon {
     private String model;
     private int memorie;
     private int diagonala;
+    private cardSIM sim;
 
     public Telefon (String model) {
         this.model = model;
@@ -32,6 +33,14 @@ public class Telefon {
 
     public int getDiagonala () {
         return this.diagonala;
+    }
+
+    public void setSim (cardSIM sim) {
+        this.sim = sim;
+    }
+
+    public cardSIM getSim () {
+        return this.sim;
     }
 
 }
