@@ -21,5 +21,21 @@ public class Main {
 
     telefon1.setSim(cardSim1);
     telefon2.setSim(new cardSIM(5, "Orange")); //asta e echivalent cu "cardSim2"
+
+        afiseaza(telefon1);
+        afiseaza(telefon2);
+
+
+    }
+
+    public static void afiseaza (Telefon telefon) {
+        String model = telefon.getModel();
+        int diagonala = telefon.getDiagonala();
+        int memorie = telefon.getMemorie();
+        cardSIM sim = telefon.getSim();
+        String operator = sim.getOperator();
+        String frecventa = sim.getNumeFrecventa();
+        System.out.println("Telefonul " + model + " are diagonala " + diagonala + ", memorie de " + memorie +
+                " si este inregistrat la " + operator + " cu frecventa de " + frecventa + ".");
     }
 }

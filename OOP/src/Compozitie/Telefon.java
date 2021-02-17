@@ -5,7 +5,7 @@ public class Telefon {
     private String model;
     private int memorie;
     private int diagonala;
-    private cardSIM sim;
+    private cardSIM sim; //Compozitie = cand un obiect are ca membru un alt obiect
 
     public Telefon (String model) {
         this.model = model;
