@@ -11,27 +11,27 @@ public class cardSIM {
         this.numeFrecventa = frecventa + "G";
     }
 
-    public void setNumeFrecventa (int frecventa) {
-        this.numeFrecventa = frecventa + "G";
+    public String getOperator() {
+        return operator;
     }
 
-    public void setOperator (String operator) {
+    public void setOperator(String operator) {
         this.operator = operator;
     }
 
-    public String getOperator () {
-        return this.operator;
+    public String getNumeFrecventa() {
+        return numeFrecventa;
     }
 
-    public String getNumeFrecventa () {
-        return this.numeFrecventa;
-    }
-
-    public void setContacte(ContacteSim[] contacte) {
-        this.contacte = contacte;
+    public void setNumeFrecventa(String numeFrecventa) {
+        this.numeFrecventa = numeFrecventa;
     }
 
     public ContacteSim[] getContacte() {
         return contacte;
+    }
+
+    public void setContacte(ContacteSim[] contacte) {
+        this.contacte = contacte;
     }
 }
