@@ -7,6 +7,7 @@ public class ContacteSim {
     private String numarTelefon;
 
     public ContacteSim (String telefon) {
+        this.numarTelefon = telefon;
     }
 
     public void setNume (String nume) {

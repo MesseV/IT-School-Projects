@@ -51,7 +51,7 @@ public class Main {
         String frecventa = sim.getNumeFrecventa();
         System.out.println("Telefonul " + model + " are diagonala " + diagonala + ", memorie de " + memorie +
                 " si este inregistrat la " + operator + " cu frecventa de " + frecventa + ".");
-        
+
         ContacteSim[] contacts = sim.getContacte();
         if (contacts != null) {
             for (int i = 0; i < contacts.length; i++) {
@@ -59,6 +59,7 @@ public class Main {
                 String nume = contact.getNume();
                 String prenume = contact.getPrenume();
                 String numarTelefon = contact.getNumarTelefon();
+                System.out.println("Contact " + (i+1) + ": " + nume + " " + prenume + " " + numarTelefon);
             }
         }
     }
