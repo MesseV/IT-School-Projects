@@ -31,7 +31,7 @@ public class Main {
     public static void afiseaza (Telefon telefon) {
         String model = telefon.getModel();
         int diagonala = telefon.getDiagonala();
-        int memorie = telefon.getMemorie();
+        String memorie = telefon.getMemorie();
         cardSIM sim = telefon.getSim();
         String operator = sim.getOperator();
         String frecventa = sim.getNumeFrecventa();

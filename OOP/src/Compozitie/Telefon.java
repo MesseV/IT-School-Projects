@@ -3,7 +3,7 @@ package Compozitie;
 public class Telefon {
 
     private String model;
-    private int memorie;
+    private String memorie;
     private int diagonala;
     private cardSIM sim; //Compozitie = cand un obiect are ca membru un alt obiect
 
@@ -20,10 +20,10 @@ public class Telefon {
     }
 
     public void setMemorie (int memorie) {
-        this.memorie = memorie;
+        this.memorie = memorie + "GB";
     }
 
-    public int getMemorie () {
+    public String getMemorie () {
         return this.memorie;
     }
 
