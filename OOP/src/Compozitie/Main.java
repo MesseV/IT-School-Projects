@@ -6,16 +6,13 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner reader = new Scanner(System.in);
-
         System.out.println("Introduceti modelul primului telefon: ");
-        String model = reader.nextLine();
-    Telefon telefon1 = new Telefon(model);
+    Telefon telefon1 = new Telefon(reader.nextLine());
     telefon1.setMemorie(10);
     telefon1.setDiagonala(8);
 
         System.out.println("Introduceti modelul celui de-al doilea telefon: ");
-        String model2 = reader.nextLine();
-    Telefon telefon2 = new Telefon(model2);
+    Telefon telefon2 = new Telefon(reader.nextLine());
     telefon2.setMemorie(12);
     telefon2.setDiagonala(10);
 
