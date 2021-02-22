@@ -32,11 +32,12 @@ public class Main {
 
             if (optiune == 1) {
                 afisareTelefoane(telefoaneInregistrate);
-                System.out.println();
+                System.out.println("---");
             }
 
             if (optiune == 3) {
                 afisareTelefoane(telefoaneInregistrate);
+                System.out.println("---");
                 System.out.println("Select the phone you want to inspect: (1-10)");
                 int indexTelefonAles = reader.nextInt();
                 reader.nextLine();
@@ -48,6 +49,7 @@ public class Main {
 
             if (optiune == 4) {
                 afisareTelefoane(telefoaneInregistrate);
+                System.out.println("---");
                 System.out.println("Select the phone you want to add a contact to: (1-10)");
                 int IndexTelefonAles = reader.nextInt();
                 reader.nextLine();
