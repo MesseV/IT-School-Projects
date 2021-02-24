@@ -19,7 +19,8 @@ public class Main {
         for (int i = 0; i < etSiAp.length; i++) {
             for (int j = 0; j < etSiAp[i].length; j++) {
                 System.out.println("Cum se numeste familia de la et." + i + ", ap." + (j+1));
-                etajeSiApartamente firstEntry = new etajeSiApartamente(reader.nextLine());
+                //etajeSiApartamente[i][j] = reader.nextLine();
+
             }
         }
         System.out.println();
