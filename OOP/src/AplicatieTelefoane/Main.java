@@ -19,8 +19,8 @@ public class Main {
             System.out.println("4. Add a new contact.");
             System.out.println("0. Exit application.");
             System.out.println("---------------------------------------");
-        optiune = reader.nextInt();
-        reader.nextLine();
+            optiune = reader.nextInt();
+            reader.nextLine();
 
             if (optiune == 2) {
                 System.out.println("Input a new phone: ");
@@ -42,7 +42,7 @@ public class Main {
                 int indexTelefonAles = reader.nextInt();
                 reader.nextLine();
 
-                Telefon telefonAles = telefoaneInregistrate[indexTelefonAles-1];
+                Telefon telefonAles = telefoaneInregistrate[indexTelefonAles - 1];
                 Contact[] contacts = telefonAles.getContact();
                 afisareContacte(contacts);
             }
@@ -68,18 +68,18 @@ public class Main {
         }
     }
 
-    public static void afisareTelefoane (Telefon[] telefoaneInregistrate) {
+    public static void afisareTelefoane(Telefon[] telefoaneInregistrate) {
         for (int i = 0; i < telefoaneInregistrate.length; i++) {
             Telefon telefon = telefoaneInregistrate[i];
             if (telefon != null) {
-            String nume = telefon.getTipTelefon();
-                System.out.println("Telefonul " + (i+1) + ". " + nume);
+                String nume = telefon.getTipTelefon();
+                System.out.println("Telefonul " + (i + 1) + ". " + nume);
             }
         }
     }
 
-    public static void afisareContacte (Contact[] contacts) {
-        for (int i = 0; i< contacts.length; i++) {
+    public static void afisareContacte(Contact[] contacts) {
+        for (int i = 0; i < contacts.length; i++) {
             Contact contact = contacts[i];
             if (contact != null) {
                 String nume = contact.getName();
