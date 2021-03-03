@@ -12,6 +12,11 @@ public class Haine extends Produs{
         return marime;
     }
 
+    @Override
+    public String getNume() {
+        return "Haina " + super.getNume();
+    }
+
     public void setMarime(String marime) {
         this.marime = marime;
     }

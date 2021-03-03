@@ -1,6 +1,6 @@
 package AplicatieCumpareProduse;
 
-public class Produs {
+public abstract class Produs {
     private String nume;
     private double pret;
     private String producator;
