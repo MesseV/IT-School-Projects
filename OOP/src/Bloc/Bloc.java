@@ -2,7 +2,7 @@ package Bloc;
 
 public class Bloc {
     private String numeBloc;
-    private etajeSiApartamente etajeSiApartamente;
+    private etajeSiApartamente[][] etajeSiApartamente;
 
     public Bloc (String nume) {
         this.numeBloc = nume;
@@ -16,11 +16,11 @@ public class Bloc {
         this.numeBloc = numeBloc;
     }
 
-    public etajeSiApartamente getEtajeSiApartamente() {
+    public etajeSiApartamente[][] getEtajeSiApartamente() {
         return etajeSiApartamente;
     }
 
-    public void setEtajeSiApartamente(etajeSiApartamente etajeSiApartamente) {
+    public void setEtajeSiApartamente(etajeSiApartamente[][] etajeSiApartamente) {
         this.etajeSiApartamente = etajeSiApartamente;
     }
 }

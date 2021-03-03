@@ -2,7 +2,8 @@ package Bloc;
 
 public class etajeSiApartamente {
     private String numeLocuitor;
-    private String[][] etajeSiApartamente;
+    private int etaj;
+    private int apartament;
 
     public etajeSiApartamente (String numeLocuitor) {
         this.numeLocuitor = numeLocuitor;
@@ -16,11 +17,19 @@ public class etajeSiApartamente {
         this.numeLocuitor = numeLocuitor;
     }
 
-    public String[][] getEtajeSiApartamente() {
-        return etajeSiApartamente;
+    public int getEtaj() {
+        return etaj;
     }
 
-    public void setEtajeSiApartamente(String[][] etajeSiApartamente) {
-        this.etajeSiApartamente = etajeSiApartamente;
+    public void setEtaj(int etaj) {
+        this.etaj = etaj;
+    }
+
+    public int getApartament() {
+        return apartament;
+    }
+
+    public void setApartament(int apartament) {
+        this.apartament = apartament;
     }
 }
