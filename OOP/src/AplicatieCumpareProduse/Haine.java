@@ -8,6 +8,11 @@ public class Haine extends Produs{
         super(nume, pret, producator);
     }
 
+    @Override
+    public String getCategory() {
+        return "Haine";
+    }
+
     public String getMarime() {
         return marime;
     }

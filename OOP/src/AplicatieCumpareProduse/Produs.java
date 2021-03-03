@@ -11,6 +11,8 @@ public abstract class Produs {
         this.producator = producator;
     }
 
+    public abstract String getCategory ();
+
     public String getNume() {
         return nume;
     }

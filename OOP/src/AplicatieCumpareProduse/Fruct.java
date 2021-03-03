@@ -16,4 +16,9 @@ public class Fruct extends Produs{
     public void setBio(boolean bio) {
         this.bio = bio;
     }
+
+    @Override
+    public String getCategory() {
+        return "Fructe";
+    }
 }
