@@ -7,7 +7,7 @@ public class Dreptunghi extends FormaGeometrica{
 
 
     @Override
-    public double calculareArea() {
+    public double calculateArea() {
         return lat * lun;
     }
 

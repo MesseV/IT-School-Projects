@@ -6,7 +6,7 @@ public class Patrat extends FormaGeometrica{
 
 
     @Override
-    public double calculareArea() {
+    public double calculateArea() {
         return lungime * lungime;
     }
 
