@@ -1,6 +1,6 @@
 package AbstractEx;
 
-public class Patrat extends FormaGeometrica{
+public class Patrat implements FormaGeometrica{
 
     private double lungime;
 

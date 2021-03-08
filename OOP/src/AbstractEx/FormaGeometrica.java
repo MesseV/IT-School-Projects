@@ -1,6 +1,6 @@
 package AbstractEx;
 
-public abstract class FormaGeometrica {
+public interface FormaGeometrica {
 
     public abstract double calculateArea();
 

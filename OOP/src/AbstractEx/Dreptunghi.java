@@ -1,7 +1,7 @@
 package AbstractEx;
 
-public class Dreptunghi extends FormaGeometrica{
-
+public class Dreptunghi implements FormaGeometrica, Desenabil{ //"implements" pt interface
+//o clasa poate extinde o singura clasa, dar poate implementa mai multe interfete
     private double lat;
     private double lun;
 
@@ -30,5 +30,10 @@ public class Dreptunghi extends FormaGeometrica{
 
     public void setLun(double lun) {
         this.lun = lun;
+    }
+
+    @Override
+    public void deseneaza(String colour) {
+        System.out.println("Se deseneaza dreptunghiul in culoarea " + colour);
     }
 }
