@@ -13,6 +13,8 @@ public class Patrat extends FormaGeometrica{
 
     @Override
     public void deseneaza() {
-
+        System.out.println("Punctul de desenare");
+        System.out.println(super.getStartPointX() + " " + super.getStartPointY());
+        System.out.println("Patrat cu latura de: " + latura);
     }
 }
