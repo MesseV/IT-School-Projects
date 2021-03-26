@@ -27,6 +27,7 @@ public class Main {
                 List<Evenimente> eventsFromFile = fileObjectWriter.read();
                 eventsFromFile.add(eveniment);
                 fileObjectWriter.write(eventsFromFile);
+
             } else if (optiune == 2){
                 List<Evenimente> eventsFromFile = fileObjectWriter.read();
                 for (Evenimente events : eventsFromFile) {
@@ -34,6 +35,7 @@ public class Main {
                                        events.getLocation() + " " +
                                        events.getDate());
                 }
+
             } else if (optiune == 3) {
                 System.out.println("Input name of event to be deleted.");
                 String eventToBeDeleted = reader.nextLine();
@@ -45,6 +47,7 @@ public class Main {
                     }
                 }
                 fileObjectWriter.write(eventsFromFile);
+
             } else if (optiune == 4) {
                 System.out.println("Input name of event to be edited.");
                 String eventToBeEdited = reader.nextLine();
