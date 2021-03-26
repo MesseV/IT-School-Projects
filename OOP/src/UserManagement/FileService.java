@@ -26,7 +26,8 @@ public class FileService {
             String[] parts = linie.split(" ");
             String nume = parts[0];
             String prenume = parts[1];
-            User user = new User(nume, prenume);
+            String adresa = parts[2];
+            User user = new User(nume, prenume, adresa);
             utilizatori.add(user);
         }
         return utilizatori;

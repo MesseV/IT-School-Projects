@@ -22,7 +22,9 @@ public class Main {
                 String nume = reader.nextLine();
                 System.out.println("Introduceti prenumele:");
                 String prenume = reader.nextLine();
-                User user = new User(nume, prenume);
+                System.out.println("Introduceti adresa utilizatorului:");
+                String adresa = reader.nextLine();
+                User user = new User(nume, prenume, adresa);
                 List<User> currentUsers = fileService.readFromFile();
                 currentUsers.add(user);
                 fileService.writeToFile(currentUsers);
