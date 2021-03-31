@@ -1,54 +1,41 @@
+import UI.ManufacturerUI;
+import UI.ProductUI;
+import org.hibernate.SessionFactory;
+import services.ManufacturerService;
+import services.ProductService;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-    ProductService productService = new ProductService();
+
+        SessionConfig sessionConfig = new SessionConfig();
+        SessionFactory sessionFactory = sessionConfig.getSessionFactory();
+        ProductService productService = new ProductService(sessionFactory);
+        ManufacturerService manufacturerService = new ManufacturerService(sessionFactory);
+
+        ProductUI productUI = new ProductUI(productService, manufacturerService);
+        ManufacturerUI manufacturerUI = new ManufacturerUI(manufacturerService);
+
         Scanner reader = new Scanner(System.in);
+        System.out.println("1. Manufacturer interface.");
+        System.out.println("2. Product interface.");
+        System.out.println("0. Exit.");
+        int optiune = reader.nextInt();
+        reader.nextLine();
 
-        int optiune = -1;
-        while (optiune != 0) {
-            System.out.println("1. Add product.");
-            System.out.println("2. Display products.");
-            System.out.println("3. Edit product price.");
-            System.out.println("4. Delete product." );
-            System.out.println("0. Exit.");
-            optiune = reader.nextInt();
-            reader.nextLine();
-            if (optiune == 1) {
-                System.out.println("Enter name of product.");
-                String name = reader.nextLine();
-                System.out.println("Enter description of product.");
-                String description = reader.nextLine();
-                System.out.println("Enter price of product.");
-                double price = reader.nextDouble();
-                reader.nextLine();
-                ProductModel product = new ProductModel();
-                product.setName(name);
-                product.setDescription(description);
-                product.setPrice(price);
-                productService.addProduct(product);
-            }
-
-            if (optiune == 2) {
-                productService.displayProducts();
-            }
-
-            if (optiune == 3) {
-                System.out.println("Enter ID of product you want to edit the price of.");
-                int id = reader.nextInt();
-                reader.nextLine();
-                double newPrice = reader.nextDouble();
-                productService.editPrice(id, newPrice);
-            }
-
-            if (optiune == 4) {
-                System.out.println("Enter ID of product you wish to remove.");
-                int id = reader.nextInt();
-                reader.nextLine();
-                productService.deleteProduct(id);
-            }
+        if (optiune == 1) {
+            System.out.println("|-|-|-|-|-|-|-|-|-|-|-|-|-|-|");
+            manufacturerUI.startManufacturerUI();
         }
 
+        if (optiune == 2) {
+            System.out.println("|-|-|-|-|-|-|-|-|-|-|-|-|-|-|");
+            productUI.startProductUI();
+        }
 
+        if (optiune == 0) {
+            return;
+        }
     }
 }

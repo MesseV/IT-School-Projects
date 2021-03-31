@@ -1,3 +1,5 @@
+package entities;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,6 +12,9 @@ public class ProductModel {
     private String name;
     private String description;
     private double price;
+
+    @ManyToOne
+    private ManufacturerModel manufacturer;
 
     public ProductModel() {
     }
@@ -44,5 +49,13 @@ public class ProductModel {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public ManufacturerModel getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(ManufacturerModel manufacturer) {
+        this.manufacturer = manufacturer;
     }
 }
