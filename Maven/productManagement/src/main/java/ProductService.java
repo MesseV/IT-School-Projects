@@ -1,9 +1,12 @@
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
 
+import java.util.List;
 import java.util.Properties;
 
 public class ProductService {
@@ -27,6 +30,44 @@ public class ProductService {
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().
                 applySettings(configuration.getProperties()).build();
         sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+    }
+
+    public void addProduct (ProductModel productModel) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        session.save(productModel);
+        transaction.commit();
+        session.close();
+    }
+
+    public void displayProducts () {
+        Session session = sessionFactory.openSession();
+        List<ProductModel> products = session.createQuery("from ProductModel").getResultList();
+
+        for (ProductModel product : products) {
+            System.out.println(product.getId() + ". " + product.getName() + " - "
+                    + product.getDescription() + " - " + product.getPrice() + " RON");
+        }
+        session.close();
+    }
+
+    public void editPrice (int id, double price) {
+        Session session = sessionFactory.openSession();
+        ProductModel productModel = session.find(ProductModel.class,id);
+        productModel.setPrice(price);
+        Transaction transaction = session.beginTransaction();
+        session.saveOrUpdate(productModel);
+        transaction.commit();
+        session.close();
+    }
+
+    public void deleteProduct (int id) {
+        Session session = sessionFactory.openSession();
+        ProductModel productModel = session.find(ProductModel.class,id);
+        Transaction transaction = session.beginTransaction();
+        session.delete(productModel);
+        transaction.commit();
+        session.close();
     }
 
 }
