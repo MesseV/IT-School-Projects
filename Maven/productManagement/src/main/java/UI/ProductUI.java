@@ -1,21 +1,27 @@
 package UI;
 
+import entities.CategoryModel;
 import entities.ManufacturerModel;
 import entities.ProductModel;
+import services.CategoryService;
 import services.ManufacturerService;
 import services.ProductService;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class ProductUI {
 
     private ProductService productService;
     private ManufacturerService manufacturerService;
+    private CategoryService categoryService;
     private Scanner reader = new Scanner(System.in);
 
-        public ProductUI(ProductService productService, ManufacturerService manufacturerService){
+        public ProductUI(ProductService productService, ManufacturerService manufacturerService, CategoryService categoryService){
             this.productService = productService;
             this.manufacturerService = manufacturerService;
+            this.categoryService = categoryService;
         }
 
 
@@ -64,11 +70,26 @@ public class ProductUI {
         reader.nextLine();
         ManufacturerModel manufacturer = manufacturerService.findById(cui);
 
+        categoryService.displayCategories();
+        List<CategoryModel> categoryList = new ArrayList<>();
+        System.out.println("Enter ID of category and enter '0' when you've added the ones you wish to add.");
+        int id = -1;
+        while (id != 0) {
+            id = reader.nextInt();
+            if (id != 0) {
+                reader.nextLine();
+                CategoryModel category = categoryService.findById(id);
+                categoryList.add(category);
+            }
+        }
+
+
         ProductModel product = new ProductModel();
         product.setName(name);
         product.setDescription(description);
         product.setPrice(price);
         product.setManufacturer(manufacturer);
+        product.setCategory(categoryList);
         productService.addProduct(product);
     }
 

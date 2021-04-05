@@ -1,6 +1,7 @@
 package entities;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "products")
@@ -15,6 +16,9 @@ public class ProductModel {
 
     @ManyToOne
     private ManufacturerModel manufacturer;
+
+    @ManyToMany
+    private List<CategoryModel> category;
 
     public ProductModel() {
     }
@@ -57,5 +61,13 @@ public class ProductModel {
 
     public void setManufacturer(ManufacturerModel manufacturer) {
         this.manufacturer = manufacturer;
+    }
+
+    public List<CategoryModel> getCategory() {
+        return category;
+    }
+
+    public void setCategory(List<CategoryModel> category) {
+        this.category = category;
     }
 }

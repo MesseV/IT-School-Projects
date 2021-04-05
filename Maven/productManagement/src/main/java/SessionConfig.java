@@ -1,6 +1,4 @@
-import entities.AddressModel;
-import entities.ManufacturerModel;
-import entities.ProductModel;
+import entities.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -28,6 +26,8 @@ public class SessionConfig {
         configuration.addAnnotatedClass(ProductModel.class);
         configuration.addAnnotatedClass(ManufacturerModel.class);
         configuration.addAnnotatedClass(AddressModel.class);
+        configuration.addAnnotatedClass(CategoryModel.class);
+        configuration.addAnnotatedClass(UserModel.class);
 
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().
                 applySettings(configuration.getProperties()).build();

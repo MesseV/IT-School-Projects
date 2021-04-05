@@ -1,5 +1,6 @@
 package services;
 
+import entities.CategoryModel;
 import entities.ManufacturerModel;
 import entities.ProductModel;
 import org.hibernate.Session;
