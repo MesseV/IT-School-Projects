@@ -24,14 +24,15 @@ public class Main {
         ManufacturerUI manufacturerUI = new ManufacturerUI(manufacturerService);
         CategoryUI categoryUI = new CategoryUI(categoryService);
         UserUI userUI = new UserUI(userService);
-
+        int optiune = -1;
+        while (optiune != 0) {
         Scanner reader = new Scanner(System.in);
         System.out.println("1. Manufacturer interface.");
         System.out.println("2. Product interface.");
         System.out.println("3. Category interface.");
         System.out.println("4. User interface.");
         System.out.println("0. Exit.");
-        int optiune = reader.nextInt();
+        optiune = reader.nextInt();
         reader.nextLine();
 
         if (optiune == 1) {
@@ -53,9 +54,6 @@ public class Main {
             System.out.println("|-|-|-|-|-|-|-|-|-|-|-|-|-|-|");
             userUI.startUserUI();
         }
-
-        if (optiune == 0) {
-            return;
         }
     }
 }
