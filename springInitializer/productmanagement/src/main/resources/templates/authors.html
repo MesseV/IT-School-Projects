@@ -2,28 +2,41 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Author List</title>
+    <style>
+      table,
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
 </head>
 <body>
 <p th:text="${title}"></p>
-
-<ul th:each="author : ${authors}">
-    <li th:text="${author.firstName}"></li>
-</ul>
 
 <table style="width:100%">
     <tr>
         <th>ID</th>
         <th>First name</th>
         <th>Last name</th>
+        <th>More details</th>
+        <th>Remove?</th>
     </tr>
     <tr th:each="author : ${authors}">
         <td th:text="${author.Id}"></td>
         <td th:text="${author.firstName}"></td>
         <td th:text="${author.lastName}"></td>
+        <td>
+            <a th:href="@{/findById(id=${author.id})}">View</a>
+        </td>
+        <td>
+            <a th:href="@{/deleteById(id=${author.id})}">X</a>
+        </td>
     </tr>
-</table>
 
-Displaying authors
+    <a th:href="@{/add-author}">Add new author</a>
+</table>
 </body>
 </html>
