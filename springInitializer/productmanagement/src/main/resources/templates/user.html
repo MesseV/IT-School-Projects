@@ -8,8 +8,6 @@
 
 <div th:each="user : ${users}">
   <p th:text="${user.id} + ' ' + ${user.firstName} + ' ' + ${user.lastName}"></p>
-  <p th:text="${user.firstName}"></p>
-  <p th:text="${user.lastName}"></p>
 </div>
 
 </body>
